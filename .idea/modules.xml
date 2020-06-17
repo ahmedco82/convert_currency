@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Retrofit2Kotlin-master.iml" filepath="$PROJECT_DIR$/Retrofit2Kotlin-master.iml" group="Retrofit2Kotlin-master" />
+      <module fileurl="file://$PROJECT_DIR$/app/Retrofit2Kotlin-master-app.iml" filepath="$PROJECT_DIR$/app/Retrofit2Kotlin-master-app.iml" group="Retrofit2Kotlin-master/app" />
+      <module fileurl="file://$PROJECT_DIR$/Retrolin.iml" filepath="$PROJECT_DIR$/Retrolin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
