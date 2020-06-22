@@ -5,78 +5,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <!-- Press on this button to get results -->
+    <Button
+        android:id="@+id/result_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Get Result"
+        app:layout_constraintBottom_toTopOf="@+id/textview_title2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+    <!-- This text is used to view results -->
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textview_result"
         android:layout_width="match_parent"
-        android:layout_height="37dp"
+        android:layout_height="37sp"
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
         android:text="Results:"
-        android:textColor="#3F51B5"
+        android:textColor="@color/blue"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.214"/>
-
-    <Spinner
-        android:id="@+id/spinner_from"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Spinner
-        android:id="@+id/spinner_to"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
-        android:text="Get Result"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_to" />
 
+    <!-- Just a title-->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textview_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert From:"
-        android:textColor="#000000"
-        android:textSize="33dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_from"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07999998" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Convert To:"
-        android:textColor="#000000"
-        android:textSize="33dp"
+        android:textColor="@color/black"
+        android:textSize="33sp"
         app:layout_constraintBottom_toTopOf="@+id/spinner_to"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_from" />
+    <!-- This spinner is used to choose a currency converter to it -->
+    <Spinner
+        android:id="@+id/spinner_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:entries="@array/array_currency"
+        app:layout_constraintBottom_toTopOf="@+id/textview_title1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title2" />
+
+    <!-- This spinner is used to choose a currency converter from it -->
+
+    <Spinner
+        android:id="@+id/spinner_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:entries="@array/array_currency"
+        app:layout_constraintBottom_toTopOf="@+id/textview_title1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title1" />
+    <!-- Just a title-->
+    <TextView
+        android:id="@+id/textview_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Convert From:"
+        android:textColor="@color/black"
+        android:textSize="33sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_from"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_button" />
 
 </android.support.constraint.ConstraintLayout>

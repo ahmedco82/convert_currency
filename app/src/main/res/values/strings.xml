@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Retrolin</string>
+    <string-array name="array_currency">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>GBP</item>
+        <item>SEK</item>
+    </string-array>
 </resources>
