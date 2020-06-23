@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
     
     //  كلاس منفصل
     internal fun getCurrentData(){
-
-        val retrofitCall = Connect.Connect.callApi()
-        retrofitCall.getCurrentData(""+from+","+""+to).enqueue(object: Callback<com.androimads.retrolin.Response> {
+        
+        val retrofitCall=  RestClient.getInterfaceInstance( "https://open.exchangerate-api.com/")
+        retrofitCall!!.getCurrentData(""+from+","+""+to).enqueue(object: Callback<com.androimads.retrolin.Response> {
 
          override fun onResponse(call:Call<com.androimads.retrolin.Response>, response:Response<com.androimads.retrolin.Response>) {
            if(response.code() == 200) {
