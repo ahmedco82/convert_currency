@@ -1,4 +1,4 @@
-package com.androimads.retrolin
+package com.androimads.retrolin.remote
 
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -14,9 +14,11 @@ object RestClient {
     private var retrofit: Retrofit? = null
     private var apiServices: CurrencyService? = null
 
-    fun getInterfaceInstance(BASE_URL:String):CurrencyService? {
+    fun getInterfaceInstance(BASE_URL:String): CurrencyService? {
         return if (apiServices == null){
-            apiServices = getClient(BASE_URL)!!.create(CurrencyService::class.java)
+            apiServices = getClient(
+                BASE_URL
+            )!!.create(CurrencyService::class.java)
             apiServices
         } else {
             apiServices

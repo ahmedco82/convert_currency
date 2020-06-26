@@ -1,4 +1,4 @@
-package com.androimads.retrolin
+package com.androimads.retrolin.ui
 
 //import Connect.Connect.Companion.callApi
 
@@ -9,16 +9,14 @@ import android.widget.AdapterView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.androimads.retrolin.R
+import com.androimads.retrolin.models.ViewModelConverter
 
 
 import kotlinx.android.synthetic.main.activity_main.*
 
-
-import retrofit2.Response
-
-class MainActivity : AppCompatActivity() {
+class MainActivity:AppCompatActivity() {
 
     private var TextViewResults:TextView? = null
 
@@ -38,8 +36,7 @@ class MainActivity : AppCompatActivity() {
            VModelConverter.currency.observe(this, Observer {
                TextViewResults!!.text = ":${VModelConverter.currency.value}"
         })
-
-
+        
         spinner_from.onItemSelectedListener = object: AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int , id: Long){
                 from= "${parent.getItemAtPosition(position).toString()}"
@@ -59,7 +56,9 @@ class MainActivity : AppCompatActivity() {
                 // Another interface callback
             }
         }
+
+
        findViewById<View>(R.id.result_button).setOnClickListener {
-           VModelConverter.setIntValue(to_index!!,from!!,to!!) }
+           VModelConverter.loadData(to_index!!,from!!,to!!) }
     }
 }

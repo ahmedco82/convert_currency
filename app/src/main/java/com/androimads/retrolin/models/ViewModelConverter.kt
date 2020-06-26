@@ -1,7 +1,9 @@
-package com.androimads.retrolin
+package com.androimads.retrolin.models
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.androimads.retrolin.models.Response
+import com.androimads.retrolin.remote.RestClient
 import retrofit2.Call
 import retrofit2.Callback
 
@@ -9,7 +11,7 @@ class ViewModelConverter:ViewModel(){
 
    val currency  = MutableLiveData<String>()
 
-    fun setIntValue(to_index:Int,from:String,to:String){
+    fun loadData(to_index:Int,from:String,to:String){
         //imageLiveData.value=5
         val retrofitCall =  RestClient.getInterfaceInstance( "https://open.exchangerate-api.com/")
         retrofitCall!!.getCurrentCurrency(""+from+","+""+to).enqueue(object: Callback<Response> {

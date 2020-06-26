@@ -1,4 +1,4 @@
-package com.androimads.retrolin
+package com.androimads.retrolin.models
 
 import com.google.gson.annotations.SerializedName
 

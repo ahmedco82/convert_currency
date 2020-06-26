@@ -1,5 +1,6 @@
-package com.androimads.retrolin
+package com.androimads.retrolin.models
 
+import com.androimads.retrolin.models.Rates
 import com.google.gson.annotations.SerializedName
 
 data class Response(
